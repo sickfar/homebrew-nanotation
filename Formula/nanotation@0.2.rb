@@ -1,18 +1,20 @@
-class Nanotation < Formula
+class NanotationAT02 < Formula
   desc "Label and annotate your code directly from the terminal"
   homepage "https://github.com/sickfar/nanotation"
-  version "0.2.1"
+  version "0.2.0"
   license "MIT"
+
+  keg_only :versioned_formula
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/sickfar/nanotation/releases/download/v#{version}/nanotation-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "68a7b0fd0295c7a8fc3ac1133700c930581b1a4d4cc42bb93e188a6bca725045"
+      sha256 "73f4f93db41c4ff4b8ee9bbdfeb8bd06447d0eae2b16e458615b3b2eb61329a8"
     end
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/sickfar/nanotation/releases/download/v#{version}/nanotation-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "54928fdc052bdcb200ba49f65331e900860ef74351ffd8f5301cc17f473328e6"
+      sha256 "7692bda4b12ccdd437efab729d98a7396abb668fb03b722113136e17433b5bef"
     end
   end
 
